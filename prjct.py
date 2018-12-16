@@ -22,8 +22,6 @@ prep = []
 bonuses = []
 snake = []
 
-#bonuses.append(Bonus.getRandomPositionBonus())
-
 
 class Pole(QFrame):
 
