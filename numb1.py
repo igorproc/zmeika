@@ -1,24 +1,11 @@
-from random import random, randint
-import sys
-from PyQt5.QtWidgets import *
-from PyQt5.QtGui import *
-from PyQt5.QtCore import *
 
-
-class Zm(QWidget):
-
-    def __init__(self):
-        super().__init__()
-        self.initUI()
-
-    def initUI(self):
-        self.setGeometry(200, 300, 800, 600)
-        self.setWindowTitle('Snake')
-
-        self.show()
-
-
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    ex = Zm()
-    sys.exit(app.exec_())
+from random import randint
+FULL_HEIGHT = 600
+FULL_WIDTH = 600
+SQUARE_HEIGHT = 10
+SQUARE_WIDTH = 10
+SET = (FULL_WIDTH / SQUARE_WIDTH, FULL_HEIGHT / SQUARE_HEIGHT)
+bonuses = []
+for i in range(10):
+    bonuses.append((randint(0, SET[0]) * 10, randint(0, SET[1]) * 10))
+print(bonuses)
